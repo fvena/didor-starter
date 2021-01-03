@@ -20,8 +20,10 @@ defineProps({
 const state = reactive({ count: 0 })
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+$color: hsl(346, 73%, 50%);
+
 a {
-  color: #42b983;
+  color: $color;
 }
 </style>
