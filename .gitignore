@@ -1,5 +1,12 @@
-node_modules
+# OS Files
 .DS_Store
+
+# Dependencies
+node_modules
+
+# Dev/Build Artifacts
 dist
 dist-ssr
+
+# local env files
 *.local
