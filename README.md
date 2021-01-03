@@ -128,11 +128,12 @@ Este es un proyecto personal, en base a mi experiencia, con unas herramientas y 
 
 Este proyecto es y será siempre de código abierto. Eres bienvenido si quieres contribuir a su desarrollo y mejorarlo cada vez más. Para ello, tienes varias posibilidades:
 
-- [Remitiendo errores](CONTRIBUTE.md#remitiendo-errores)
-- [Añadiendo nueva funcionalidad](CONTRIBUTE.md#a%C3%B1adiendo-nueva-funcionalidad)
-- [Compartiendo en redes sociales](CONTRIBUTE.md#compartiendo-en-redes-sociales-%EF%B8%8F)
-- [Convirtiéndote en un colaborador oficial](CONTRIBUTE.md#convi%C3%A9rtiendote-en-un-colaborador-oficial)
-- [Haciendo una pequeña donación](CONTRIBUTE.md#haciendo-una-peque%C3%B1a-donaci%C3%B3n)
+- [Remitiendo errores](.github/contributing.md#remitiendo-errores)
+- [Solucionando errores](.github/contributing.md#solucionando-errores)
+- [Añadiendo nueva funcionalidad](.github/contributing.md#añadiendo-nueva-funcionalidad)
+- [Compartiendo en redes sociales](.github/contributing.md#compartiendo-en-redes-sociales-%EF%B8%8F)
+- [Convirtiéndote en un colaborador oficial](.github/contributing.md#conviértete-en-un-colaborador-oficial)
+- [Haciendo una pequeña donación](.github/contributing.md#haciendo-una-pequeña-donación)
 
 ## Licencia
 
