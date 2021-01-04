@@ -5,11 +5,11 @@ p
 SelectLanguage
 
 p
-  router-link.link(to="/") {{ t('message.home')}}
+  router-link.link(to="/") {{ t('messages.home')}}
   ||
-  router-link.link(to="/about") {{ t('message.about') }}
+  router-link.link(to="/about") {{ t('messages.about') }}
 
-HelloWorld(:msg="t('message.hello')")
+HelloWorld
 
 router-view
 </template>

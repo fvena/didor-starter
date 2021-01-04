@@ -1,33 +1,5 @@
 import { createI18n } from "vue-i18n";
-
-const messages = {
-  en: {
-    message: {
-      hello: "Didor starter template",
-      home: "Home",
-      about: "About",
-    },
-    home: {
-      title: "Home Page",
-    },
-    about: {
-      title: "About Page",
-    },
-  },
-  es: {
-    message: {
-      hello: "Didor plantilla inicio",
-      home: "Inicio",
-      about: "Nosotros",
-    },
-    home: {
-      title: "Página de inicio",
-    },
-    about: {
-      title: "Página sobre nosotros",
-    },
-  },
-};
+import { messages } from "vite-i18n-resources";
 
 const i18n = createI18n({
   legacy: false,
@@ -35,5 +7,13 @@ const i18n = createI18n({
   fallbackLocale: "es",
   messages,
 });
+
+if (import.meta.hot) {
+  import.meta.hot.on('locales-update', (data) => {
+    Object.keys(data).forEach(lang => {
+      i18n.global.setLocaleMessage(lang, data[lang]);
+    });
+  })
+}
 
 export default i18n;
