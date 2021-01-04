@@ -1,15 +1,25 @@
 <template lang="pug">
-img(alt="Vue logo" src="./assets/logo.png")
-HelloWorld(msg="Hello Vue 3 + Vite + Pug + Sass")
+p
+  img(alt="Vue logo" src="./assets/logo.png")
 
-router-link(to="/") Home |
-router-link(to="/about") About
+SelectLanguage
+
+p
+  router-link.link(to="/") {{ t('message.home')}}
+  ||
+  router-link.link(to="/about") {{ t('message.about') }}
+
+HelloWorld(:msg="t('message.hello')")
 
 router-view
 </template>
 
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import { useI18n } from 'vue-i18n';
+import SelectLanguage from './components/SelectLanguage.vue';
+import HelloWorld from './components/HelloWorld.vue';
+
+const { t } = useI18n()
 </script>
 
 <style lang="scss">
@@ -20,5 +30,9 @@ import HelloWorld from './components/HelloWorld.vue'
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   text-align: center;
+}
+
+.link {
+ margin: 0 0.5rem;
 }
 </style>
