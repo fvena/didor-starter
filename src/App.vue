@@ -11,6 +11,8 @@ p
 
 HelloWorld
 
+p {{ vue.Constant.PRUEBA }}
+
 router-view
 </template>
 
