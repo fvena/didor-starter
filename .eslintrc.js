@@ -18,5 +18,6 @@ module.exports = {
   rules: {
     "vue/no-unused-vars": "off",
     "no-unused-vars": "off",
+    'vue/max-attributes-per-line': ['warn', { singleline: 5 }],
   },
 };

@@ -1,7 +1,7 @@
 import { createI18n } from "vue-i18n";
 import { messages } from "vite-i18n-resources";
-import StorageService from "/Core/services/storage.service";
-import CONSTANTS from "/Core/constant";
+import StorageService from "./Storage.service";
+import Constant from '../constant';
 
 /**
  * Devuelve el idioma de la aplicación
@@ -9,19 +9,10 @@ import CONSTANTS from "/Core/constant";
  * @return {String} - Idioma seleccionado
  */
 const getAppLanguage = () => {
-  const localStorageLanguage = StorageService.getItem("language");
+  const localStorageLanguage = StorageService.getItem("locale");
   const navigatorLanguage = navigator.language.split("-");
-  const defaultLanguage = CONSTANTS.LANGUAGE.DEFAULT;
+  const defaultLanguage = Constant.LANGUAGE.DEFAULT;
   return localStorageLanguage || navigatorLanguage[0] || defaultLanguage || "en";
-};
-
-/**
- * Devuelve el idioma por defecto cuando no se encuentre una traducción
- *
- * @return {String} - Idioma por defecto
- */
-const getFallbackLanguage = () => {
-  return CONSTANTS.LANGUAGE.FALLBACK || "en";
 };
 
 /**
@@ -30,7 +21,7 @@ const getFallbackLanguage = () => {
 const i18n = createI18n({
   legacy: false,
   locale: getAppLanguage(),
-  fallbackLocale: getFallbackLanguage(),
+  fallbackLocale: Constant.LANGUAGE.FALLBACK,
   messages,
 });
 
@@ -45,4 +36,35 @@ if (import.meta.hot) {
   });
 }
 
+/**
+ * Cambia el idioma de la aplicación
+ *
+ * @param {String} lang - Código del idioma seleccionado
+ * @return {String} - Código del idioma seleccionado
+ * @throws {CoreError} - langNotFound
+ */
+const setLanguage = (locale = i18n.global.locale.value) => {
+  //
+  // Si el idioma es el mismo que está seleccionado, no hago nada
+  //
+  if (i18n.global.locale.value === locale) return locale;
+
+  //
+  // Compruebo si el nuevo idioma se encuentra entre los idiomas disponibles
+  //
+  if (!i18n.global.availableLocales.includes(locale)) {
+    throw new Error('langNotFound');
+  }
+
+  //
+  // Actualizo el idioma
+  //
+  i18n.global.locale.value = locale;
+  StorageService.setItem('locale', locale);
+  document.querySelector('html').setAttribute('lang', locale);
+
+  return locale;
+};
+
+export { setLanguage };
 export default i18n;

@@ -1,14 +1,11 @@
 <template lang="pug">
-a.selectLanguage__link(@click="toggleLocales('en')" href="#") EN
-a.selectLanguage__link(@click="toggleLocales('es')" href="#") ES
+a.selectLanguage__link(@click="setLanguage('en')" href="#") EN
+a.selectLanguage__link(@click="setLanguage('es')" href="#") ES
+a.selectLanguage__link(@click="setLanguage('fr')" href="#") FR
 </template>
 
 <script setup>
-import { useI18n } from 'vue-i18n'
-
-const i18n = useI18n()
-
-const toggleLocales = lang => i18n.locale.value = lang;
+import { setLanguage } from '../services/Language.service';
 </script>
 
 <style lang="scss" scoped>

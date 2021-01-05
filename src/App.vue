@@ -11,8 +11,6 @@ p
 
 HelloWorld
 
-p {{ vue.Constant.PRUEBA }}
-
 router-view
 </template>
 
@@ -20,8 +18,9 @@ router-view
 import { useI18n } from 'vue-i18n';
 import SelectLanguage from './components/SelectLanguage.vue';
 import HelloWorld from './components/HelloWorld.vue';
+import StorageService from "./services/Storage.service";
 
-const { t } = useI18n()
+const { t } = useI18n();
 </script>
 
 <style lang="scss">

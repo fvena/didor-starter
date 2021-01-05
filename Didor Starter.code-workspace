@@ -86,6 +86,19 @@
       "first-line-h1": false,
       "no-multiple-blanks": false,
       "list-marker-space": false
-    }
+    },
+    "i18n-ally.localesPaths": [
+      "src/locales"
+    ],
+    "i18n-ally.namespace": true,
+    "i18n-ally.pathMatcher": "{namespaces}.{locale}.json",
+    "i18n-ally.sourceLanguage": "es",
+    "i18n-ally.sortKeys": true,
+    "i18n-ally.keystyle": "nested",
+    "i18n-ally.keepFulfilled": true,
+    "i18n-ally.localeCountryMap": {
+      "en": "gb",
+      "es": "es"
+    },
   }
 }
