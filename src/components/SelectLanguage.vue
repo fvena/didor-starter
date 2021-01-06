@@ -5,11 +5,11 @@ a.selectLanguage__link(@click="setLanguage('fr')" href="#") FR
 </template>
 
 <script setup>
-import { setLanguage } from '../services/Language.service';
+  import { setLanguage } from '/@/services/Language.service';
 </script>
 
 <style lang="scss" scoped>
-.selectLanguage__link {
-  margin: 0.5rem;
-}
+  .selectLanguage__link {
+    margin: 0.5rem;
+  }
 </style>
