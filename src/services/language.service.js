@@ -1,7 +1,8 @@
-import { createI18n } from "vue-i18n";
-import { messages } from "vite-i18n-resources";
-import StorageService from "./Storage.service";
-import Constant from '../constant';
+import { createI18n } from 'vue-i18n';
+import { messages } from 'vite-i18n-resources';
+import StorageService from '/@/services/Storage.service';
+import CoreError from '/@/services/Errors.service';
+import Constant from '/@/constant';
 
 /**
  * Devuelve el idioma de la aplicación
@@ -9,10 +10,10 @@ import Constant from '../constant';
  * @return {String} - Idioma seleccionado
  */
 const getAppLanguage = () => {
-  const localStorageLanguage = StorageService.getItem("locale");
-  const navigatorLanguage = navigator.language.split("-");
+  const localStorageLanguage = StorageService.getItem('locale');
+  const navigatorLanguage = navigator.language.split('-');
   const defaultLanguage = Constant.LANGUAGE.DEFAULT;
-  return localStorageLanguage || navigatorLanguage[0] || defaultLanguage || "en";
+  return localStorageLanguage || navigatorLanguage[0] || defaultLanguage || 'en';
 };
 
 /**
@@ -29,8 +30,8 @@ const i18n = createI18n({
  * Actualiza las traducciones automaticamente al modificar los archivos de idiomas
  */
 if (import.meta.hot) {
-  import.meta.hot.on("locales-update", (data) => {
-    Object.keys(data).forEach((lang) => {
+  import.meta.hot.on('locales-update', data => {
+    Object.keys(data).forEach(lang => {
       i18n.global.setLocaleMessage(lang, data[lang]);
     });
   });
@@ -53,7 +54,7 @@ const setLanguage = (locale = i18n.global.locale.value) => {
   // Compruebo si el nuevo idioma se encuentra entre los idiomas disponibles
   //
   if (!i18n.global.availableLocales.includes(locale)) {
-    throw new Error('langNotFound');
+    throw new CoreError('langNotFound');
   }
 
   //
