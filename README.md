@@ -16,7 +16,9 @@
 
 ## Características
 
-- ⚡️ [Vue3](https://github.com/vuejs/vue-next), [Vite](https://github.com/vitejs/vite) - nacido a la última
+- ⚡️ [Vue3](https://github.com/vuejs/vue-next) y [Vite](https://github.com/vitejs/vite) - nacido a la última
+
+- 🛠 [Sass](https://sass-lang.com/) y [Pug](https://pugjs.org/api/getting-started.html) - Mucha más funcionalidad para tus estilos y un código HTML más legible.
 
 - 📲 [PWA](https://github.com/antfu/vite-plugin-pwa)
 
@@ -29,6 +31,8 @@
 - 😃 [Iconos](https://mmf-fe.github.io/svgicon/en/) - Crea fácilmente componentes de tus iconos en svg
 
 - 🌍 [i18n](./locales) - Preparado para la internacionalización de su aplicación
+
+- 🐛 Completo servicio de gestión de errores y logs
 
 - ☁️ [Netlify](https://app.netlify.com/start) - Publicala en Netlify, cero-config
 
@@ -50,13 +54,16 @@
 
 ### Coding Style
 
-- Use Composition API with [`<script setup>` SFC](https://github.com/vuejs/rfcs/pull/227)
 - [ESLint](https://eslint.org/) with [@antfu/eslint-config-vue](https://github.com/antfu/eslint-config), single quotes, no semi.
+- [Stylelint](https://eslint.org/) with [@antfu/eslint-config-vue](https://github.com/antfu/eslint-config), single quotes, no semi.
+- [Prettier](https://eslint.org/) with [@antfu/eslint-config-vue](https://github.com/antfu/eslint-config), single quotes, no semi.
 
 ### Herramientas de desarrollo
 
+- [Pug](https://pugjs.org/api/getting-started.html) - Es un template engine que mejora la legibilidad de nuestro código y nos ayuda a escribir más rápido.
+- [Sass]()
 - [vite-ssg](https://github.com/antfu/vite-ssg) - Server-side generation
-- [Netlify](https://www.netlify.com/) - Desplagar
+- [Netlify](https://www.netlify.com/) - Desplegar tu proyecto
 - [VS Code Extensions](./.vscode/extensions.json)
   - [i18n Ally](https://marketplace.visualstudio.com/items?itemName=antfu.i18n-ally)
   - [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur)
