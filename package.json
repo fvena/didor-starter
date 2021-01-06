@@ -5,7 +5,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint:script": "eslint --ext .js,vue --ignore-path .gitignore .",
-    "lint:stylelint": "stylelint src/**/*.{css,scss,vue}"
+    "lint:stylelint": "stylelint src/**/*.{css,scss,vue}",
+    "release": "HUSKY_SKIP_HOOKS=1 standard-version"
   },
   "dependencies": {
     "vue": "^3.0.5",
@@ -50,6 +51,11 @@
     "*.{css,scss,vue}": "stylelint --fix",
     "*": "prettier -w -u",
     "*.{png,jpeg,jpg,gif,svg}": "imagemin-lint-staged"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   },
   "config": {
     "commitizen": {
