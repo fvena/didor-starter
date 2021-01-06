@@ -34,38 +34,7 @@
     // ===
     "vetur.validation.style": true,
     "vetur.validation.template": false,
-    "vetur.format.defaultFormatter.html": "prettier",
-    "vetur.format.defaultFormatter.pug": "prettier",
-    "vetur.format.defaultFormatter.css": "prettier",
-    "vetur.format.defaultFormatter.postcss": "prettier",
-    "vetur.format.defaultFormatter.scss": "prettier",
-    "vetur.format.defaultFormatter.js": "prettier",
-    "vetur.format.defaultFormatter.ts": "prettier",
-    "vetur.format.defaultFormatter.sass": "sass-formatter",
-    "vetur.format.options.tabSize": 2,
-    "vetur.format.options.useTabs": false,
-    "vetur.format.defaultFormatterOptions": {
-      "prettier": {
-        // Prettier option here
-        "arrowParens": "avoid",
-        "bracketSpacing": true,
-        "endOfLine": "lf",
-        "htmlWhitespaceSensitivity": "strict",
-        "jsxBracketSameLine": true,
-        "printWidth": 300,
-        "proseWrap": "never",
-        "semi": true,
-        "singleQuote": true,
-        "tabWidth": 2,
-        "trailingComma": "es5",
-        "useTabs": false
-      },
-      "sass.format.debug": false,
-      "sass.format.deleteEmptyRows": true,
-      "sass.format.deleteWhitespace": true,
-      "sass.format.convert": true,
-      "sass.format.setPropertySpace": true
-    },
+    "vetur.format.enable": false,
 
     // ===
     // CSS
@@ -87,9 +56,7 @@
       "no-multiple-blanks": false,
       "list-marker-space": false
     },
-    "i18n-ally.localesPaths": [
-      "src/locales"
-    ],
+    "i18n-ally.localesPaths": ["src/locales"],
     "i18n-ally.namespace": true,
     "i18n-ally.pathMatcher": "{namespaces}.{locale}.json",
     "i18n-ally.sourceLanguage": "es",
@@ -100,5 +67,9 @@
       "en": "gb",
       "es": "es"
     },
+    "i18n-ally.enabledFrameworks": ["vue"]
+  },
+  "extensions": {
+    "recommendations": ["octref.vetur", "sdras.vue-vscode-snippets", "dbaeumer.vscode-eslint", "stylelint.vscode-stylelint", "DavidAnson.vscode-markdownlint", "esbenp.prettier-vscode", "syler.sass-indented", "antfu.i18n-ally", "Orta.vscode-jest", "mikestead.dotenv"]
   }
 }

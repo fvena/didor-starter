@@ -1,0 +1,13 @@
+ls:
+  src:
+    .js: camelCase
+    .vue: PascalCase
+    .scss: camelCase
+  src/**/locales:
+    .json: regex:[a-z]+\.[a-z]{2}
+  src/**/models:
+    .js: regex:[A-Z][a-z]+[A-Z]?[a-z]*\.model
+  src/**/pages:
+    .js: regex:[A-Z][a-z]+[A-Z]?[a-z]*\.page
+  src/**/services:
+    .js: regex:[A-Z][a-z]+[A-Z]?[a-z]*\.service
