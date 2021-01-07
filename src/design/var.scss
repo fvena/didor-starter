@@ -1,0 +1,275 @@
+//
+// Paleta de colores
+//
+// Colores de marca, estado y neutros
+//
+
+//
+// Colores de Marca
+//
+$brand-darker: hsl(204, 97%, 12%);
+$brand-dark: hsl(203, 87%, 34%);
+$brand: hsl(201, 79%, 46%);
+$brand-light: hsl(197, 92%, 61%);
+$brand-lighter: hsl(196, 100%, 85%);
+$brand-a20: hsla(201, 79%, 46%, 0.2);
+
+//
+// Colores de Estado
+//
+$warning-darker: hsl(29, 100%, 35%);
+$warning-dark: hsl(31, 100%, 45%);
+$warning: hsl(31, 100%, 60%);
+$warning-light: hsl(31, 100%, 75%);
+$warning-lighter: hsl(31, 100%, 90%);
+$warning-a20: hsla(31, 100%, 60%, 0.2);
+
+$success-darker: hsl(171, 100%, 13%);
+$success-dark: hsl(167, 98%, 20%);
+$success: hsl(165, 91%, 32%);
+$success-light: hsl(161, 64%, 49%);
+$success-lighter: hsl(158, 74%, 87%);
+$success-a20: hsla(165, 91%, 32%, 0.2);
+
+$danger-darker: hsl(358, 94%, 12%);
+$danger-dark: hsl(360, 94%, 28%);
+$danger: hsl(4, 86%, 44%);
+$danger-light: hsl(10, 83%, 62%);
+$danger-lighter: hsl(10, 100%, 87%);
+$danger-a20: hsla(4, 85%, 44%, 0.2);
+
+//
+// Colores Neutros
+//
+$color-gray1: hsl(212, 23%, 16%);
+$color-gray2: hsl(209, 20%, 25%);
+$color-gray3: hsl(209, 14%, 37%);
+$color-gray4: hsl(211, 10%, 53%);
+$color-gray5: hsl(211, 13%, 65%);
+$color-gray6: hsl(210, 16%, 78%);
+$color-gray7: hsl(207, 15%, 86%);
+$color-gray8: hsl(210, 31%, 94%);
+
+$color-black: hsl(0, 0%, 0%);
+$color-white: hsl(0, 0%, 100%);
+$color-transparent: transparent;
+
+//
+// Colores Semánticos
+//
+$color-content: color(gray2);
+$color-heading: color(gray1);
+$color-caption: color(gray4);
+$color-background: color(gray8);
+$color-link: color(brand);
+$color-link-hover: color(brand-dark);
+$color-border: color(gray6);
+$color-mark: color(content);
+$color-mark-background: color(brand-a20);
+
+$button-default-gradient-background1: color(gray5);
+$button-default-gradient-background2: color(gray4);
+$button-default-gradient-background1-hover: color(gray4);
+$button-default-gradient-background2-hover: color(gray3);
+
+//
+// Tipografía
+//
+
+// Familias tipográficas
+//
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
+
+$font-family-base: 'Roboto', helvetica neue, arial, sans-serif !default;
+$font-family-heading: 'Roboto', helvetica neue, arial, sans-serif !default;
+$font-family-monospace: 'Courier New', courier, monospace !default;
+
+// Tamaños de fuente base por tamaño de pantalla
+//
+$root-font-size-palm: 18px;
+$root-font-size-lap: 18px;
+$root-font-size-small: 18px;
+$root-font-size-desk: 18px;
+$root-font-size-large: 18px;
+
+// Pesos tipográficos
+//
+$font-weight-extralight: 400;
+$font-weight-light: 400;
+$font-weight-normal: 400;
+$font-weight-semibold: 500;
+$font-weight-bold: 500;
+$font-weight-black: 500;
+
+$font-weight-heading: $font-weight-bold;
+
+// Altura de linea
+//
+$line-height: 1.5;
+
+// Escala modular
+//
+// Valores sugeridos de escala (http://type-scale.com/)
+//
+//   second: 1.067
+//   major-second: 1.125
+//   minor-third: 1.2
+//   major-third: 1.25
+//   perfect-fourth: 1.333
+//   augmented-fourth: 1.414
+//   perfect-fifth: 1.5
+//   golden: 1.618
+//
+$modular-scale: 1.2;
+
+// Tracking
+//
+$letter-spacing: 0;
+
+// Color del texto silenciado
+//
+$text-muted: color(gray2);
+
+$styles-sizes: (
+  'h1': 5,
+  'h2': 4,
+  'h3': 3,
+  'h4': 2,
+  'h5': 1,
+  'base': 0,
+  'small1': -1,
+  'small2': -2,
+);
+
+$styles-weights: (
+  'normal': $font-weight-normal,
+  'bold': $font-weight-bold,
+);
+
+$styles-colors: (
+  'black': color(gray1),
+  'gray': color(gray4),
+  'white': #ffffff,
+);
+
+@each $size-name, $size-value in $styles-sizes {
+  @each $weight-name, $weight-value in $styles-weights {
+    @each $color-name, $color-value in $styles-colors {
+      %#{$size-name}-#{$weight-name}-#{$color-name},
+      .#{$size-name}-#{$weight-name}-#{$color-name} {
+        font-size: font-size($size-value) !important;
+        font-weight: $weight-value !important;
+        color: $color-value !important;
+      }
+    }
+  }
+}
+
+// Links
+//
+// $link-color: $color-primary;
+// $link-color-hover: darken-lightness($link-color, 20%);
+$link-decoration: none;
+$link-decoration-hover: underline;
+
+/**
+ * SPACE AND LAYOUT SETTINGS
+ */
+$grid-columns: 12;
+$container-width-palm: 670px;
+$container-width-lap: 670px;
+$container-width-small: 670px;
+$container-width-desk: 670px;
+$container-width-large: 670px;
+
+$space: $line-height * 1rem;
+
+$spacing-map: (
+  'none': 0,
+  'quarter': $space / 4,
+  'half': $space / 2,
+  'simple': $space,
+  'double': $space * 2,
+  'triple': $space * 3,
+  'quadruple': $space * 4,
+  'quintuple': $space * 5,
+  'sextuple': $space * 6,
+);
+
+$size-percentages: (
+  '25': 25%,
+  '50': 50%,
+  '75': 75%,
+  '100': 100%,
+);
+
+/**
+ * STYLE SETTINGS
+ */
+$border-width: 1px;
+$border-color: color(border);
+$border-radius: 10px;
+
+/**
+ * Z-INDEX OF LAYERS
+ */
+$z-index-negative: -1;
+$z-index-page: 1;
+$z-index-aside: 5;
+$z-index-header: 5;
+$z-index-dropdown: 10;
+$z-index-sticky: 10;
+$z-index-fixed: 10;
+$z-index-modal: 15;
+$z-index-popover: 20;
+$z-index-tooltip: 25;
+
+// Transiciones
+//
+$transition-duration: 300ms;
+
+/**
+ * RESPONSIVE SETTINGS
+ */
+
+/**
+ * Breakpoints
+ * Valor en em del tamaño máximo de pantalla
+ *
+ * Existen 5 tamaños de pantalla definidos:
+ *   palm  - Móviles                                  (0 - 600px)
+ *   lap   - Tablet verticales y Móviles horizontales (601px - 900px)
+ *   small - Tablet horizontales                      (901px - 1200px)
+ *   desk  - Portátiles y monitores pequeños          (1201px - 1600px)
+ *   large - Monitores grandes                        (1601px - ...)
+ */
+$palm: 600px; // ~37.5em
+$lap: 900px; // ~56.25em
+$small: 1200px; // ~75em
+$desk: 1600px; // ~100em
+
+/**
+ * Mobile First
+ *
+ * Indica si se trata de un diseño siguiendo el enfoque Mobile First
+ */
+$mobile-first: true;
+$responsive: true;
+
+/**
+ * Print
+ * Indica si el contenido es susceptible de ser imprimido o guardado como pdf
+ */
+$print: false;
+
+$button-danger-gradient-background1: color(danger);
+$button-danger-gradient-background2: color(danger-dark);
+$button-danger-gradient-background1-hover: color(danger-dark);
+$button-danger-gradient-background2-hover: color(danger-darker);
+
+$button-warning-gradient-background1: color(warning);
+$button-warning-gradient-background2: color(warning-dark);
+$button-warning-gradient-background1-hover: color(warning-dark);
+$button-warning-gradient-background2-hover: color(warning-darker);
+
+$navBarHeight: 50px;

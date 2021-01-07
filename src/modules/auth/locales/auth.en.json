@@ -1,0 +1,84 @@
+{
+  "account": "My Account",
+  "advanced": "Advanced",
+  "agree": "By creating and logging in to your account, you have read and agree to each of the following:",
+  "ampm": "24 hour format",
+  "authorize": "I authorize the Aidoo Platform to email me for:",
+  "close": "Close",
+  "commercial": "Subscribe for communications",
+  "dataTitle": "User Data",
+  "delete": {
+    "title": "Delete Account!",
+    "message": "If you delete your account, you won't have access to any unit."
+  },
+  "deleteAccount": "Your account has been deleted successfully",
+  "demo": "Demo Mode",
+  "done": "Done",
+  "edit": "Save",
+  "email": "Email",
+  "exitDemo": "Exit Demo",
+  "fail": "Something went wrong, please try again later",
+  "forgot": "Forgot password?",
+  "forgotPassword": {
+    "title": "Reset Password",
+    "subtitle": "Please enter your email address to request a Password reset."
+  },
+  "goToLogin": "Go to Login",
+  "haptic": "Activate feedback",
+  "hapticDescription": "Sounds and Haptic",
+  "language": "App Language",
+  "lastName": "Last Name",
+  "license": "End-User License Agreement",
+  "loading": "Loading...",
+  "login": {
+    "title": "Welcome!",
+    "subtitle": "Enter your login info"
+  },
+  "logout": "Log out",
+  "logoutConfirm": "Do you really want to log out?",
+  "logoutReason": "Your session has been closed correctly.",
+  "marketing": "Marketing purposes.",
+  "name": "First Name",
+  "notValidate": {
+    "title": "Not verified!",
+    "message": "Your account has not been verified. Do you want to receive a new validation email?"
+  },
+  "password": "Password",
+  "privacy": "Privacy Policy",
+  "register": {
+    "title": "Welcome!",
+    "subtitle": "Enter your login info"
+  },
+  "resendToken": {
+    "title": "Done!",
+    "message": "Check your email to validate."
+  },
+  "resetPassword": {
+    "title": "Done!",
+    "message": "Check your email to for change password."
+  },
+  "send": "Sign In",
+  "sessionClosed": "Your session has been closed by other zones",
+  "sessionExpired": "Your session has expired. Go back to login and try again.",
+  "signUp": {
+    "title": "Done!",
+    "message": "Your account has been created. Check your email to for validation."
+  },
+  "signUpLink": "New here? Sign Up",
+  "success": "Action was successfully executed",
+  "sundayFirst": "Sunday first day of the week",
+  "terms": "Terms of Use",
+  "title": "My Account",
+  "units": "Temperature Unit",
+  "unitsName": {
+    "celsius": "Celsius",
+    "fah": "Fahrenheit"
+  },
+  "user": "User",
+  "userNotAvailable": {
+    "title": "Ooops!",
+    "message": "Sorry, there is already a registered user with this information. Check your data or try to login."
+  },
+  "userNotExist": "Sorry, there isn't any user with this data.",
+  "userSettings": "User settings"
+}

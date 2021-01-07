@@ -8,18 +8,24 @@ p
   router-link.link(to="/") {{ t('messages.home')}}
   ||
   router-link.link(to="/about") {{ t('messages.about') }}
+  ||
+  router-link.link(to="/login") {{ t('messages.login') }}
 
 HelloWorld
+
+p {{ store.counter }}
 
 router-view
 </template>
 
 <script setup>
   import { useI18n } from 'vue-i18n';
+  import { useState } from '/Auth/models/User.model';
   import SelectLanguage from '/Auth/components/SelectLanguage.vue';
   import HelloWorld from '/Auth/components/HelloWorld.vue';
   import StorageService from '/Core/services/Storage.service';
 
+  const store = useState();
   const { t } = useI18n();
 </script>
 

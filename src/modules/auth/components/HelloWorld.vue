@@ -1,11 +1,11 @@
 <template lang="pug">
-button(@click="state.count++") count is: {{ state.count }}
+button(@click="store.increment") counter is: {{ store.counter }}
 </template>
 
 <script setup>
-  import { reactive } from 'vue';
+  import { useState } from '/Auth/models/User.model';
 
-  const state = reactive({ count: 0 });
+  const store = useState();
 </script>
 
 <style lang="scss" scoped>

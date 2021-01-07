@@ -1,0 +1,92 @@
+{
+  "account": "Mi cuenta",
+  "advanced": "Avanzado",
+  "agree": "Creando y accediendo a su cuenta, confirma la lectura y consentimiento de cada uno de los siguientes términos:",
+  "ampm": "Formato AM/PM",
+  "authorize": "Autorizo a la plataforma Aidoo a enviarme emails:",
+  "close": "Cerrar",
+  "commercial": "Recibir emails comerciales",
+  "dataTitle": "Datos del usuario",
+  "delete": {
+    "title": "¡Eliminar cuenta!",
+    "message": "Si eliminas tu cuenta, dejarás de tener acceso a tus zonas. ¿Quieres continuar?"
+  },
+  "deleteAccount": "Tu cuenta ha sido eliminada correctamente",
+  "demo": "Demo",
+  "done": "Hecho",
+  "edit": "Guardar",
+  "email": "Email",
+  "exitDemo": "Salir Demo",
+  "expireEmail": {
+    "title": "Error!",
+    "message": "Lo sentimos, el link de activación ha caducado, solicite uno nuevo."
+  },
+  "fail": "Ha sucedido un error, inténtalo más tarde",
+  "forgot": "¿Olvidaste tu contraseña?",
+  "forgotPassword": {
+    "title": "Cambiar contraseña",
+    "subtitle": "Introduzca su email para cambiar su contraseña"
+  },
+  "goToLogin": "Volver al Login",
+  "haptic": "Feedback activado",
+  "hapticDescription": "Sonidos y Háptico",
+  "language": "Idioma",
+  "lastName": "Apellidos",
+  "license": "Acuerdo de licencia con el usuario final",
+  "loading": "Cargando...",
+  "login": {
+    "title": "¡Bienvenido!",
+    "subtitle": "Introduce tus datos de registro"
+  },
+  "logout": "Cerrar sesión",
+  "logoutConfirm": "¿Quiere cerrar su sesión y salir de la aplicación?",
+  "logoutReason": "Tu sesión se ha cerrado correctamente.",
+  "marketing": "Comerciales",
+  "name": "Nombre",
+  "notValidate": {
+    "title": "¡Email no verificado!",
+    "message": "Tu cuenta de email aún no ha sido verificada. Necesitas verificar tu cuenta de correo para utilizar la aplicación. ¿Quieres recibir un nuevo email de verificación?"
+  },
+  "password": "Contraseña",
+  "privacy": "Política de Privacidad",
+  "register": {
+    "title": "¡Bienvenido!",
+    "subtitle": "Introduce tus datos de registro"
+  },
+  "resendToken": {
+    "title": "¡Correcto!",
+    "message": "Comprueba tu correo para validar tu email."
+  },
+  "resetPassword": {
+    "title": "¡Correcto!",
+    "message": "Comprueba tu email para modificar tu contraseña."
+  },
+  "send": "Enviar",
+  "sessionClosed": "Su sesión ha sido cerrada desde otro dispositivo",
+  "sessionExpired": "Tu sesión ha expirado. Vuelve a login e inténtalo de nuevo.",
+  "signUp": {
+    "title": "¡Correcto!",
+    "message": "Tu cuenta ha sido creada. Comprueba tu correo para validar tu email."
+  },
+  "signUpLink": "Registro",
+  "success": "Acción realizada con éxito",
+  "sundayFirst": "Domingo primer día de la semana",
+  "terms": "Términos de Uso",
+  "title": "Mi cuenta",
+  "units": "Unidades",
+  "unitsName": {
+    "celsius": "Centígrados",
+    "fah": "Fahrenheit"
+  },
+  "user": "Usuario",
+  "userNotAvailable": {
+    "title": "Ooops!",
+    "message": "Lo sentimos, ya existe un usuario registrado con estos datos. Comprueba si los datos son correctos o intenta entrar en la aplicación."
+  },
+  "userNotExist": "Lo sentimos, no existe ningún usuario registrado con esos datos.",
+  "userSettings": "Ajustes de usuario",
+  "validateEmail": {
+    "title": "¡Correcto!",
+    "message": "Tu cuenta ha sido verificada. Ya puedes comenzar a utilizar tu aplicación."
+  }
+}

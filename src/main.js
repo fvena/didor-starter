@@ -1,22 +1,20 @@
 import { createApp } from 'vue';
-import router from '/Core/router';
 import i18n from '/Core/services/Language.service';
+import router from '/Core/router';
 import ApiService from '/Core/services/Api.service';
-import App from '/@/App.vue';
+import { stateSymbol, createStore } from '/Auth/models/User.model';
 import CONSTANTS from '/@/constant';
 
-console.log(CONSTANTS);
+// Aplicación
+import App from '/@/App.vue';
+
+// Estilos de la aplicación
+import './design/main.scss';
 
 ApiService.init(CONSTANTS.CONNECT.API_URL);
 
-const data = {
-  grant_type: 'password',
-  email: 'user_1@email.com',
-  password: 'foobarfoo',
-  client_id: CONSTANTS.CONNECT.API_CLIENT_ID,
-};
-
-const result = ApiService.post('oauth/token', data);
-console.log(result);
-
-createApp(App).use(router).use(i18n).mount('#app');
+const app = createApp(App);
+app.provide(stateSymbol, createStore);
+app.use(router);
+app.use(i18n);
+app.mount('#app');
