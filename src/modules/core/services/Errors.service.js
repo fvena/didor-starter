@@ -1,4 +1,4 @@
-import AppError from '/@/services/Error.service';
+import AppError from '/Core/services/Error.service';
 
 const mapError = {
   default: ['00', 'Error por defecto, se aplica cuando no se especifica ningún código de error', false],

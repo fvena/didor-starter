@@ -1,7 +1,7 @@
 import { createApp } from 'vue';
-import router from '/@/router';
-import i18n from '/@/services/Language.service';
-import ApiService from '/@/services/Api.service';
+import router from '/Core/router';
+import i18n from '/Core/services/Language.service';
+import ApiService from '/Core/services/Api.service';
 import App from '/@/App.vue';
 import CONSTANTS from '/@/constant';
 

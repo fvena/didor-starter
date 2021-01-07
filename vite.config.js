@@ -5,6 +5,8 @@ import i18nResources from 'vite-plugin-i18n-resources';
 export default {
   alias: {
     '/@': resolve(__dirname, './src'),
+    '/Core': resolve(__dirname, './src/modules/core'),
+    '/Auth': resolve(__dirname, './src/modules/auth'),
   },
   plugins: [
     vue(),

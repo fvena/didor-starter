@@ -5,7 +5,7 @@ a.selectLanguage__link(@click="setLanguage('fr')" href="#") FR
 </template>
 
 <script setup>
-  import { setLanguage } from '/@/services/Language.service';
+  import { setLanguage } from '/Core/services/Language.service';
 </script>
 
 <style lang="scss" scoped>

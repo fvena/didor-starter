@@ -1,7 +1,7 @@
 import { createI18n } from 'vue-i18n';
 import { messages } from 'vite-i18n-resources';
-import StorageService from '/@/services/Storage.service';
-import CoreError from '/@/services/Errors.service';
+import StorageService from '/Core/services/Storage.service';
+import CoreError from '/Core/services/Errors.service';
 import Constant from '/@/constant';
 
 /**

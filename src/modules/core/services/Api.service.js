@@ -1,9 +1,9 @@
 import axios from 'axios';
-import Router from '/@/router';
-import AuthService from '/@/services/auth.service';
-import CoreError from '/@/services/Errors.service';
-import StorageService from '/@/services/Storage.service';
-import log from '/@/services/Log.service';
+import Router from '/Core/router';
+import AuthService from '/Auth/services/auth.service';
+import CoreError from '/Core/services/Errors.service';
+import StorageService from '/Core/services/Storage.service';
+import log from '/Core/services/Log.service';
 
 const ApiService = {
   /**

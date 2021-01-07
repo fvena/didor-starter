@@ -1,4 +1,4 @@
-import log from '/@/services/Log.service';
+import log from '/Core/services/Log.service';
 
 /**
  * Genera un error personalizados dentro de la aplicación

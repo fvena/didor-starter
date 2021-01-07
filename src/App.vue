@@ -16,9 +16,9 @@ router-view
 
 <script setup>
   import { useI18n } from 'vue-i18n';
-  import SelectLanguage from '/@/components/SelectLanguage.vue';
-  import HelloWorld from '/@/components/HelloWorld.vue';
-  import StorageService from '/@/services/Storage.service';
+  import SelectLanguage from '/Auth/components/SelectLanguage.vue';
+  import HelloWorld from '/Auth/components/HelloWorld.vue';
+  import StorageService from '/Core/services/Storage.service';
 
   const { t } = useI18n();
 </script>
