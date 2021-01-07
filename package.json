@@ -2,13 +2,14 @@
   "name": "didor-starter",
   "version": "0.0.1",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --mode dev",
     "build": "vite build",
     "lint:script": "eslint --ext .js,vue --ignore-path .gitignore .",
     "lint:stylelint": "stylelint src/**/*.{css,scss,vue}",
     "release": "HUSKY_SKIP_HOOKS=1 standard-version"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "vue": "^3.0.5",
     "vue-i18n": "^9.0.0-beta.18",
     "vue-router": "^4.0.2"

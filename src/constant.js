@@ -33,9 +33,18 @@ export default {
   },
 
   /**
+   * CONNECT
+   *
+   * @constant {Object} CONNECT - Parámetros de conexión con el backend
+   * @property {API_URL} DEV - URL del api
+   */
+  CONNECT: {
+    API_URL: import.meta.env.VITE_API_URL,
+    API_CLIENT_ID: import.meta.env.VITE_API_CLIENT_ID,
+  },
+
+  /**
    * @constant {Object} - Links de las App stores
-   * @property {String} IOS - Links de la aplicación para iOS
-   * @property {String} ANDROID - Links de la aplicación para Android
    */
   STORE: {
     IOS: import.meta.env.VITE_STORE_IOS,
