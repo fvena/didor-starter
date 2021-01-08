@@ -1,48 +1,40 @@
-// import { reactive, readonly, provide, inject, ref  } from 'vue';
-// // import ApiService from '../../core/services/Api.service';
-// // import CONSTANTS from '/@/constant';
+import Model from '/Core/models/Model.model';
+import { reactive, readonly, provide, inject, ref, computed } from 'vue';
+// import ApiService from '../../core/services/Api.service';
+// import CONSTANTS from '/@/constant';
 
-// class Base {
-//   constructor() {
-//     this.assign(this.fields)
-//     console.log(this.fields);
-//   }
+class MyClass extends Model {
+  // static entity = 'Store Entity'
+  // static fields() {
+  //   return {
+  //     counter: 0,
+  //     name: 'pepe'
+  //   }
+  // }
+  // increment() {
+  //   // const data = {
+  //   //   counter: this.counter + 1,
+  //   //   name: 'Juan'
+  //   // }
+  //   // this.update(data)
+  //   this.set('counter', this.counter + 1)
+  //   // this.counter++;
+  // }
+}
 
-//   // fields = {}
+export const stateSymbol = Symbol('state');
+export const createStore = new MyClass();
+console.log(createStore);
+console.log(MyClass.entity);
+console.log(MyClass.fields());
+// console.log(createStore.counter = 13)
+export const useState = () => {
+  const store = inject(stateSymbol);
 
-//   assign(fields) {
-//     Object.keys(fields).forEach(key => {
-//       Object.defineProperty(this, key, {
-//         get: function() { return this.fields[key] }
-//       })
-//     })
-//   }
-// }
+  if (!store) throw new Error('no store provided');
 
-// class Store extends Base {
-//   constructor() {
-//     super()
-//     console.log(this.fields)
-//   }
-
-//   fields = reactive({
-//     counter: 0
-//   })
-
-//   increment() {
-//     this.fields.counter++
-//   }
-// }
-
-// export const stateSymbol = Symbol('state');
-// export const createStore = new Store();
-// export const useState = () => {
-//   const store = inject(stateSymbol);
-
-//   if (!store) throw new Error('no store provided');
-
-//   return store
-// }
+  return store;
+};
 
 // export const provideState = () => provide(
 //   stateSymbol,
