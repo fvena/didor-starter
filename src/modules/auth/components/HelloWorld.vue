@@ -1,11 +1,11 @@
 <template lang="pug">
-button(@click="store.increment") counter is: {{ store.counter }}
+button(@click="User.increment") counter is: {{ User.counter }}
 </template>
 
 <script setup>
-  import { useState } from '/Auth/models/User.model';
+  import { useStore } from '/Core/plugins/vue-models';
 
-  const store = useState();
+  const { User } = useStore();
 </script>
 
 <style lang="scss" scoped>

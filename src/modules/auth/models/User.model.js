@@ -1,40 +1,45 @@
-import Model from '/Core/models/Model.model';
-import { reactive, readonly, provide, inject, ref, computed } from 'vue';
+import { Model } from '../../core/plugins/vue-models';
+// import AuthService from 'Auth/services/auth.service';
+
 // import ApiService from '../../core/services/Api.service';
 // import CONSTANTS from '/@/constant';
 
-class MyClass extends Model {
-  // static entity = 'Store Entity'
-  // static fields() {
-  //   return {
-  //     counter: 0,
-  //     name: 'pepe'
-  //   }
-  // }
-  // increment() {
-  //   // const data = {
-  //   //   counter: this.counter + 1,
-  //   //   name: 'Juan'
-  //   // }
-  //   // this.update(data)
-  //   this.set('counter', this.counter + 1)
-  //   // this.counter++;
-  // }
+/**
+ * @typedef {Object} User
+ * @property {Number} id - identificador dentro de entities del modelo Vuex ORM
+ * @property {Number} userID - identificador dentro del sistema
+ * @property {String} name - Nombre del usuario
+ * @property {String} lastName - Apellidos del usuario
+ * @property {String} email - Email del usuario
+ * @property {String} avatar - Imagen del usuario
+ * @property {Boolean} commercial - Comercial activo o no
+ * @property {Boolean} toc - Activo o no
+ * @property {Boolean} notification - Notificaciones activas o no
+ * @property {Boolean} ampm - Modo AM/PM activo o no
+ * @property {Boolean} sundayFirst - Primer día de la semana activo o no
+ * @property {Boolean} noHaptic - Sensación háptica en algunas funciones
+ * @property {Number} units - Número de unidades asignadas
+ * @property {String} lang - Lenguaje del usuario
+ */
+export default class User extends Model {
+  static entity = 'User';
+
+  static fields() {
+    return {
+      counter: 0,
+      name: 'pepe',
+    };
+  }
+
+  increment() {
+    // const data = {
+    //   counter: this.counter + 1,
+    //   name: 'Juan'
+    // }
+    // this.update(data)
+    this.set('counter', this.counter + 1);
+  }
 }
-
-export const stateSymbol = Symbol('state');
-export const createStore = new MyClass();
-console.log(createStore);
-console.log(MyClass.entity);
-console.log(MyClass.fields());
-// console.log(createStore.counter = 13)
-export const useState = () => {
-  const store = inject(stateSymbol);
-
-  if (!store) throw new Error('no store provided');
-
-  return store;
-};
 
 // export const provideState = () => provide(
 //   stateSymbol,

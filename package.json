@@ -11,11 +11,13 @@
   "dependencies": {
     "@didor/components": "^0.5.10",
     "axios": "^0.21.1",
+    "babel-eslint": "^10.1.0",
     "vue": "^3.0.5",
     "vue-i18n": "^9.0.0-beta.18",
     "vue-router": "^4.0.2"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-methods": "^7.12.1",
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
     "@ls-lint/ls-lint": "^1.9.2",
@@ -49,10 +51,12 @@
     }
   },
   "lint-staged": {
-    "*.{js,vue}": "eslint --fix",
     "*.{css,scss,vue}": "stylelint --fix",
     "*": "prettier -w -u",
     "*.{png,jpeg,jpg,gif,svg}": "imagemin-lint-staged"
+  },
+  "lint-staged-Old": {
+    "*.{js,vue}": "eslint --fix"
   },
   "commitlint": {
     "extends": [

@@ -5,6 +5,7 @@ module.exports = {
     es2021: true,
     node: true,
   },
+  parser: 'babel-eslint',
   extends: ['plugin:vue/vue3-recommended', 'eslint:recommended', 'prettier', 'prettier/vue'],
   plugins: ['vue'],
   settings: {
