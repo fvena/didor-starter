@@ -28,11 +28,16 @@
   div
     router-link.auth__link(to='/auth/forgot') {{ t("auth.forgot") }}
     router-link.auth__link(to='/auth/register') {{ t("auth.register") }}
+
+  p Nombre: {{ User.name }} {{ User.surname }}
+
 </template>
 
 <script setup>
   import { ref } from 'vue';
   import { useI18n } from 'vue-i18n';
+  import User from '/Auth/models/User.model';
+  // import { useStore } from '/Core/plugins/vue-models';
 
   // Data
   const email = ref('');
@@ -43,13 +48,14 @@
 
   // Methods
   const { t } = useI18n();
+  // const { User } = useStore();
 
   const clearForm = () => {
     email.value = '';
     password.value = '';
   };
 
-  const loginUser = () => {
-    console.log('login user');
+  const loginUser = async () => {
+    await User.loginUser('user_1@email.com', 'foobarfoo');
   };
 </script>

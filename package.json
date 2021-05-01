@@ -1,6 +1,6 @@
 {
   "name": "didor-starter",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "scripts": {
     "dev": "vite --mode dev",
     "build": "vite build",
@@ -11,7 +11,6 @@
   "dependencies": {
     "@didor/components": "^0.5.10",
     "axios": "^0.21.1",
-    "babel-eslint": "^10.1.0",
     "vue": "^3.0.5",
     "vue-i18n": "^9.0.0-beta.18",
     "vue-router": "^4.0.2"
@@ -21,8 +20,10 @@
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
     "@ls-lint/ls-lint": "^1.9.2",
+    "@prettier/plugin-pug": "^1.13.2",
     "@vitejs/plugin-vue": "^1.0.4",
     "@vue/compiler-sfc": "^3.0.5",
+    "babel-eslint": "^10.1.0",
     "commitizen": "^4.2.2",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.17.0",
@@ -45,7 +46,6 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "ls-lint && lint-staged",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
     }

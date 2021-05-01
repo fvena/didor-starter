@@ -11,21 +11,13 @@ p
   ||
   router-link.link(to="/login") {{ t('messages.login') }}
 
-HelloWorld
-
-p {{ User.counter }}
 
 router-view
 </template>
 
 <script setup>
   import { useI18n } from 'vue-i18n';
-  import { useStore } from '/Core/plugins/vue-models';
-  import SelectLanguage from '/Auth/components/SelectLanguage.vue';
-  import HelloWorld from '/Auth/components/HelloWorld.vue';
-  import StorageService from '/Core/services/Storage.service';
 
-  const { User } = useStore();
   const { t } = useI18n();
 </script>
 

@@ -16,6 +16,8 @@ const ApiService = {
     axios.defaults.baseURL = `${baseURL}`;
     axios.defaults.headers.post['Content-Type'] = 'application/json';
     axios.defaults.headers.post.Accept = 'application/json';
+    axios.defaults.headers.get['Content-Type'] = 'application/json';
+    axios.defaults.headers.get.Accept = 'application/json';
     axios.defaults.timeout = 10000;
 
     // Interceptor
